@@ -47,7 +47,7 @@ const Spotify = {
 
   savePlaylist(name, trackUris) {
     if (!name || !trackUris.length) {
-       alert('Add some songs first');
+      alert("Add some songs first");
     }
 
     const accessToken = Spotify.getAccessToken();

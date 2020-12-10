@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./App.css";
 import SearchBar from "../SearchBar/SearchBar";
-import Playlist from "../Playlist/Playlist";
 import SearchResults from "../SearchResults/SearchResults";
+import Playlist from "../Playlist/Playlist";
 import Spotify from "../../util/Spotify";
+import "../App/App.css";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -29,8 +29,8 @@ function App() {
   const savePlaylist = () => {
     const trackUris = playlistTracks.map((track) => track.uri);
     Spotify.savePlaylist(playlistName, trackUris).then(() => {
-        setPlaylistName("New Playlist")
-        setPlaylistTracks([])
+      setPlaylistName("New Playlist");
+      setPlaylistTracks([]);
     });
   };
 
